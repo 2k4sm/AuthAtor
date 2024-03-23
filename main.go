@@ -15,7 +15,7 @@ import (
 // It initializes the Gin framework, loads the environment variables, sets up the database configuration, initializes the database connection, sets up authentication routes, and starts the server.
 func main() {
 	r := gin.Default()
-
+	gin.SetMode(gin.ReleaseMode)
 	err := godotenv.Load()
 	if err != nil {
 		log.Fatal("Error loading .env file")

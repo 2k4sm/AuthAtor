@@ -6,11 +6,12 @@ import (
 	"time"
 
 	"github.com/2k4sm/AuthAtor/models"
+	"github.com/2k4sm/AuthAtor/utils"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
 )
 
-var jwtKey = []byte(os.Getenv("SECRET_KEY"))
+var jwtKey = []byte(os.Getenv("my_secret_key"))
 
 func Login(c *gin.Context) {
 	user := models.User{}
